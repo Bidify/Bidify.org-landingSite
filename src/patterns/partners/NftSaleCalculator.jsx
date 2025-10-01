@@ -44,7 +44,7 @@ const NftSaleCalculator = () => {
   };
 
   return (
-    <div className="nft-sale-calculator">
+    <div id="nft-sale-calculator" className="nft-sale-calculator">
       <h3 className="calculator-title">NFT Sale Breakdown Calculator</h3>
       <p className="calculator-description">
         See how the fees are distributed when an NFT is sold

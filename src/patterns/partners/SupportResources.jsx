@@ -21,7 +21,7 @@ const resourceData = [
 
 const SupportResources = () => {
   return (
-    <div className="support-resources">
+    <div id="support-resources" className="support-resources">
       <h3 className="resources-title">Support & Resources</h3>
       <div className="resources-grid">
         {resourceData.map((resource, index) => (

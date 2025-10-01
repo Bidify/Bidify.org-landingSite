@@ -15,10 +15,10 @@ const PartnersPage = () => {
       <HeroSection />
       
       <div className="padding_container">
-        <PartnershipBenefits />
-        <NftSaleCalculator />
-        <GettingStarted />
-        <CTASection />
+        <PartnershipBenefits id="partnership-benefits" />
+        <NftSaleCalculator id="earnings-calculator" />
+        <GettingStarted id="getting-started" />
+        <CTASection id="resources" />
       </div>
     </div>
   );

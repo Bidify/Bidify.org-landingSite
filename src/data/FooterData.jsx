@@ -8,10 +8,8 @@ export const company = [
 
 export const links = [
   { title: "Smart Contract", to: "https://github.com/Bidify" },
-  { title: "Whitepaper", to: "http://whitepaper.bidify.org/" },
   { title: "Brand Guide", to: "https://github.com/Bidify/Branding" },
-  { title: "Partnerships", to: "http://partnerships.bidify.org" },
-  { title: "Economics Paper", to: "http://economics.bidify.org/" },
+  { title: "Partnerships", to: "/partners" },
 ];
 
 export const explore = [

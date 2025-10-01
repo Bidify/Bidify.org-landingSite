@@ -1,10 +1,38 @@
 import React from 'react';
 import Button from '../../../components/Button';
 import { getIconComponent } from '../utils/icons';
-import handshake from '../../../assets/icons/handshake.svg';
+import Slideshow from './Slideshow';
 import './HeroSection.scss';
 
 const HeroSection = () => {
+  const scrollToCalculator = () => {
+    const element = document.getElementById('nft-sale-calculator');
+    if (element) {
+      const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navbarHeight - 20; // 20px extra padding
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollToResources = () => {
+    const element = document.getElementById('support-resources');
+    if (element) {
+      const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navbarHeight - 20; // 20px extra padding
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section className="hero-section">
       {/* Full width background */}
@@ -30,23 +58,23 @@ const HeroSection = () => {
             
             <div className="hero-buttons">
               <a
-                href="http://partnerships.bidify.org"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#nft-sale-calculator"
+                onClick={scrollToCalculator}
                 className="hero-primary-cta"
               >
-                <Button variant="primary" size="large">
-                  <span>Get Started Now</span>
+                <Button variant="primary">
+                  <span>Earnings Calculator</span>
                   {getIconComponent('arrow', 20)}
                 </Button>
               </a>
               
               <a
-                href="#partnership-benefits"
+                href="#support-resources"
+                onClick={scrollToResources}
                 className="hero-secondary-cta"
               >
-                <Button variant="secondary" size="large">
-                  <span>Learn More</span>
+                <Button variant="secondary">
+                  <span>Resources</span>
                   {getIconComponent('arrow', 20)}
                 </Button>
               </a>
@@ -56,11 +84,7 @@ const HeroSection = () => {
           {/* Right Content - Image */}
           <div className="hero-visual">
             <div className="hero-image-container">
-              <img
-                src={handshake}
-                alt="Partnership"
-                className="hero-image"
-              />
+              <Slideshow />
               <div className="hero-image-glow" />
             </div>
           </div>

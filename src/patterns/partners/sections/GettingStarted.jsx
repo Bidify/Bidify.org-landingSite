@@ -17,7 +17,7 @@ const GettingStarted = () => {
   };
 
   return (
-    <section className="getting-started">
+    <section id="support-resources" className="getting-started">
       <div className="section-header">
         <h2 className="section-title">
           Get Started as a Partner

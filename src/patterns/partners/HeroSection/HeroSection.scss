@@ -12,6 +12,9 @@
   overflow: visible;
 }
 
+// Import slideshow styles
+@import './Slideshow.scss';
+
 .hero-background {
   position: absolute;
   top: 0;
@@ -203,6 +206,30 @@
   
   @media (min-width: 769px) {
     width: auto;
+  }
+  
+  // Ensure buttons are properly styled
+  .primary_btn,
+  .secondary_btn {
+    width: 100%;
+    justify-content: center;
+    
+    @media (min-width: 769px) {
+      width: auto;
+    }
+    
+    span {
+      font-family: "gentona-medium";
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    
+    svg {
+      flex-shrink: 0;
+      margin-left: 0.5rem;
+    }
   }
 }
 
