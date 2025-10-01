@@ -9,7 +9,6 @@ import "../styles/pages/landingPage.scss";
 
 import heroIllustration from "../assets/abstracts/heroIllustration.svg";
 // import explainThumb from "../assets/icons/play.png"
-import team from "../assets/abstracts/team.svg";
 // import testimonialMap from "../assets/abstracts/testimonialMap.svg";
 
 import { featureData } from "../data/featureData";
@@ -211,7 +210,7 @@ const landingPage = () => {
             </a>
           </div>
         </div>
-        <img src={team} alt="team" />
+        <img src="/nft.png" alt="NFT" className="nft-image" />
       </div>
       {/* {renderGettingStarted} */}
       {renderEcosystem}

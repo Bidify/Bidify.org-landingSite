@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../components/Button";
+import IntroAnimation from "../components/IntroAnimation";
 
 import "../styles/patterns/navbar.scss";
 
@@ -9,6 +10,17 @@ import close from "../assets/icons/close.svg";
 
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
+  const [showLogoAnimation, setShowLogoAnimation] = useState(false);
+
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    setShowLogoAnimation(true);
+    setTimeout(() => {
+      setShowLogoAnimation(false);
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 2000);
+  };
 
   const renderSiderbar = (
     <div className={sidebar ? "sidebar active" : "sidebar"}>
@@ -41,6 +53,13 @@ const Navbar = () => {
         Features
       </a>
       <a
+        href="/partners"
+        className="text_secondary_14_W400"
+        onClick={() => setSidebar(false)}
+      >
+        Partners
+      </a>
+      <a
         href="/#contactus"
         className="text_secondary_14_W400"
         onClick={() => setSidebar(false)}
@@ -59,10 +78,22 @@ const Navbar = () => {
     </div>
   );
   return (
-    <div className="navbar">
-      <div className="navbar_logo">
-        <img src={logo} alt="logo" />
-      </div>
+    <>
+      {showLogoAnimation && (
+        <IntroAnimation
+          onComplete={() => setShowLogoAnimation(false)}
+        />
+      )}
+      <div className="navbar sticky">
+        <div className="navbar_logo">
+          <img
+            src={logo}
+            alt="logo"
+            onClick={handleLogoClick}
+            className="cursor"
+            style={{ cursor: 'pointer' }}
+          />
+        </div>
       <div className="navbar_contents">
         <div className="navbar_contents_links">
           <a
@@ -93,6 +124,13 @@ const Navbar = () => {
           >
             Features
           </a>
+          <a
+            href="/partners"
+            className="text_secondary_14_W400"
+            onClick={() => setSidebar(false)}
+          >
+            Partners
+          </a>
         </div>
         <a
           href="http://app.bidify.org/"
@@ -114,6 +152,7 @@ const Navbar = () => {
       </div>
       {renderSiderbar}
     </div>
+    </>
   );
 };
 

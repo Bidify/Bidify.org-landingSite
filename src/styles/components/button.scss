@@ -1,17 +1,34 @@
 .primary_btn {
     border: none;
     outline: none;
-    border-radius: 8px;
+    border-radius: 0.5rem; /* Mobile base */
     cursor: pointer;
     background: #f79420;
     color: rgba(255, 255, 255, 1);
-    padding: 10px 1em;
+    padding: 0.75rem 1.5rem; /* Mobile base */
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-gap: 8px;
+    grid-gap: 0.5rem; /* Mobile base */
     transform: scale(1);
     transition: 300ms all;
+    min-height: 3rem; /* Minimum height for mobile touch targets */
+    min-width: 8rem; /* Minimum width for mobile buttons */
+    font-size: 0.875rem; /* Mobile base */
+    font-weight: 500;
+    white-space: nowrap;
+  
+    @media (min-width: 768px) {
+      padding: 0.625rem 1rem; /* 10px 1em */
+      min-height: 2.5rem;
+      min-width: auto;
+    }
+  
+    @media (min-width: 1024px) {
+      padding: 0.625rem 1rem;
+      min-height: 2.5rem;
+      min-width: auto;
+    }
   
     &:active {
       transform: scale(0.95);
@@ -23,15 +40,32 @@
     background: #ffffff;
     color: #BF5B18;
     border: 1px solid #BF5B18;
-    padding: 10px 1em;
+    padding: 0.75rem 1.5rem; /* Mobile base */
     outline: none;
-    border-radius: 8px;
+    border-radius: 0.5rem; /* Mobile base */
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-gap: 8px;
+    grid-gap: 0.5rem; /* Mobile base */
     transform: scale(1);
     transition: 300ms all;
+    min-height: 3rem; /* Minimum height for mobile touch targets */
+    min-width: 8rem; /* Minimum width for mobile buttons */
+    font-size: 0.875rem; /* Mobile base */
+    font-weight: 500;
+    white-space: nowrap;
+  
+    @media (min-width: 768px) {
+      padding: 0.625rem 1rem; /* 10px 1em */
+      min-height: 2.5rem;
+      min-width: auto;
+    }
+  
+    @media (min-width: 1024px) {
+      padding: 0.625rem 1rem;
+      min-height: 2.5rem;
+      min-width: auto;
+    }
   
     &:active {
       transform: scale(0.9);
@@ -42,20 +76,35 @@
   .bid_btn {
     border: none;
     outline: none;
-    border-radius: 8px;
+    border-radius: 0.5rem; /* Mobile base */
     cursor: pointer;
     background: transparent;
     color: #343434;
     border: 1px solid #F79420;
-    padding: 10px 1em;
-    font-size: 14px;
+    padding: 0.75rem 1.5rem; /* Mobile base */
+    font-size: 0.875rem; /* Mobile base */
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-gap: 8px;
+    grid-gap: 0.5rem; /* Mobile base */
     transform: scale(1);
     transition: 300ms all;
+    min-height: 3rem; /* Minimum height for mobile touch targets */
+    min-width: 8rem; /* Minimum width for mobile buttons */
+    white-space: nowrap;
+  
+    @media (min-width: 768px) {
+      padding: 0.625rem 1rem; /* 10px 1em */
+      min-height: 2.5rem;
+      min-width: auto;
+    }
+  
+    @media (min-width: 1024px) {
+      padding: 0.625rem 1rem;
+      min-height: 2.5rem;
+      min-width: auto;
+    }
   
     &:active {
       transform: scale(0.99);

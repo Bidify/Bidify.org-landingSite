@@ -1,51 +1,66 @@
 .roadmap {
   background: #f8f8f8;
-  padding: 50px;
+  padding: 3rem; /* Mobile base */
 
-  @media (max-width: 768px) {
-    padding: 30px 30px 50px;
+  @media (min-width: 768px) {
+    padding: 3rem;
   }
-  @media (max-width: 576px) {
-    padding: 30px 10px 50px;
+
+  @media (min-width: 1024px) {
+    padding: 3rem;
   }
 
   .card_wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 8em;
-    grid-row-gap: 2em;
+    grid-template-columns: 1fr; /* Mobile single column */
+    gap: 2rem; /* Mobile base */
 
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr; /* Tablet 2 columns */
+      gap: 8rem;
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr; /* Desktop 2 columns */
+      gap: 8rem;
     }
 
     .card {
       background: #ffffff;
-      border-radius: 10px;
-      padding: 1.5em;
+      border-radius: 1rem; /* Mobile base */
+      padding: 1.5rem; /* Mobile base */
       box-shadow: 0px 25px 40px -25px #6c737d;
       position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0px 35px 50px -25px #6c737d;
+      }
 
       .before {
         position: absolute;
         background: rgba(247, 148, 32, 0.15);
-        width: 1.5em;
-        height: 1.5em;
+        width: 1.5rem; /* Mobile base */
+        height: 1.5rem;
         top: 50%;
         transform: translate(50%, -50%);
         right: 0;
         border-radius: 50%;
         display: grid;
         place-items: center;
+        z-index: 1;
 
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
           left: 50%;
           top: 100%;
           transform: translate(-50%, -50%);
         }
 
-        @media (max-width: 576px) {
-          display: none;
+        @media (min-width: 1024px) {
+          left: 50%;
+          top: 100%;
+          transform: translate(-50%, -50%);
         }
 
         p {
@@ -59,23 +74,26 @@
       .after {
         position: absolute;
         background: rgba(247, 148, 32, 0.15);
-        width: 1.5em;
-        height: 1.5em;
+        width: 1.5rem; /* Mobile base */
+        height: 1.5rem;
         top: 50%;
         transform: translate(-50%, -50%);
         left: 0;
         border-radius: 50%;
         display: grid;
         place-items: center;
+        z-index: 1;
 
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
           left: 50%;
           top: 0;
           transform: translate(-50%, -50%);
         }
 
-        @media (max-width: 576px) {
-          display: none;
+        @media (min-width: 1024px) {
+          left: 50%;
+          top: 0;
+          transform: translate(-50%, -50%);
         }
 
         p {
@@ -90,8 +108,20 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: 130px;
-        height: 130px;
+        width: 8rem; /* Mobile base */
+        height: 8rem;
+        object-fit: contain;
+        padding: 1rem;
+
+        @media (min-width: 768px) {
+          width: 8rem;
+          height: 8rem;
+        }
+
+        @media (min-width: 1024px) {
+          width: 8rem;
+          height: 8rem;
+        }
       }
     }
   }

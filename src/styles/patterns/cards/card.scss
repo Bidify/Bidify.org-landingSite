@@ -1,7 +1,28 @@
 .infoCards {
   text-align: center;
   align-items: center;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0px 25px 40px -25px #6C737D;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   
+  /* Ensure card itself is constrained and centered within its grid column */
+  max-width: 300px;
+  margin: 0 auto;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 35px 50px -25px #6C737D;
+  }
+  
+  @media (min-width: 768px) {
+    padding: 2.5rem;
+  }
+  
+  @media (min-width: 1024px) {
+    padding: 3rem;
+  }
 }
 
 .exploreCards {

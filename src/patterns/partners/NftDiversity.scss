@@ -1,0 +1,281 @@
+.nft-diversity {
+  background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+  padding: 3.5rem 2rem;
+  margin: 3rem auto;
+  border-radius: 1.5rem;
+  max-width: 1200px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  
+  @media (min-width: 768px) {
+    padding: 4rem 2rem;
+    margin: 2.5rem auto;
+  }
+  
+  @media (min-width: 1024px) {
+    padding: 5rem 3rem;
+    margin: 3rem auto;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    @media (min-width: 768px) {
+      margin-bottom: 4rem;
+    }
+    
+    .section-title {
+      font-family: "gentona-semiBold";
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.333;
+      letter-spacing: 0.04em;
+      color: #BF5B18;
+      margin-bottom: 0.75rem;
+      
+      @media (min-width: 768px) {
+        font-size: 1.75rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+      }
+      
+      @media (min-width: 1024px) {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+      }
+    }
+    
+    .section-subtitle {
+      font-family: "gentona-book";
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+      
+      @media (min-width: 768px) {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+      
+      @media (min-width: 1024px) {
+        font-size: 1.125rem;
+        line-height: 1.6;
+      }
+    }
+  }
+  
+  .nft-content {
+    .category-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+      
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+        margin-bottom: 3.5rem;
+      }
+    }
+    
+    .future-features {
+      background: linear-gradient(135deg, #BF5B18 0%, #f79420 100%);
+      border-radius: 1.25rem;
+      padding: 2.5rem;
+      color: white;
+      text-align: center;
+      box-shadow: 0 15px 50px -10px rgba(191, 91, 24, 0.4),
+                  0 8px 30px -5px rgba(0, 0, 0, 0.2);
+      max-width: 800px;
+      margin: 0 auto;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+      overflow: hidden;
+      animation: gradientPulse 4s ease-in-out infinite;
+      
+      @media (min-width: 768px) {
+        padding: 3rem;
+      }
+      
+      @media (min-width: 1024px) {
+        padding: 3.5rem;
+      }
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+        animation: backgroundMove 20s linear infinite;
+        pointer-events: none;
+      }
+      
+      .future-title {
+        font-family: "gentona-medium";
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.333;
+        letter-spacing: 0.04em;
+        color: #ffffff;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 1;
+        
+        @media (min-width: 768px) {
+          font-size: 1.375rem;
+          line-height: 1.4;
+          margin-bottom: 1.25rem;
+        }
+        
+        @media (min-width: 1024px) {
+          font-size: 1.5rem;
+          line-height: 1.5;
+          margin-bottom: 1.5rem;
+        }
+      }
+      
+      .future-description {
+        font-family: "gentona-book";
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: 0.04em;
+        color: rgba(255, 255, 255, 0.95);
+        position: relative;
+        z-index: 1;
+        
+        @media (min-width: 768px) {
+          font-size: 1rem;
+          line-height: 1.7;
+        }
+        
+        @media (min-width: 1024px) {
+          font-size: 1.125rem;
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+}
+
+.category-card {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.08),
+              0 4px 15px -4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.12),
+                0 8px 25px -5px rgba(0, 0, 0, 0.08);
+    border-color: rgba(191, 91, 24, 0.15);
+  }
+  
+  .category-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    
+    svg {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover svg {
+      transform: scale(1.1);
+    }
+  }
+  
+  .category-title {
+    font-family: "gentona-semiBold";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.333;
+    letter-spacing: 0.04em;
+    color: #BF5B18;
+    margin-bottom: 0.75rem;
+    
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+    
+    @media (min-width: 1024px) {
+      font-size: 1.375rem;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
+  }
+  
+  .category-description {
+    font-family: "gentona-book";
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #666;
+    
+    @media (min-width: 768px) {
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    
+    @media (min-width: 1024px) {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+@keyframes gradientPulse {
+  0%, 100% {
+    background: linear-gradient(135deg, #BF5B18 0%, #f79420 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, #BF5B18 0%, #f79420 100%);
+    filter: brightness(1.05);
+  }
+}
+
+@keyframes backgroundMove {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50px, -50px) rotate(360deg);
+  }
+}
