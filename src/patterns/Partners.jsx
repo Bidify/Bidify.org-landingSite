@@ -23,8 +23,7 @@ const Partners = () => {
 
       <div style={{ display: "grid", placeItems: "center", marginTop: "2em" }}>
         <a
-          href="http://partnerships.bidify.org"
-          target="_blank"
+          href="/partners"
           rel="noopener noreferrer"
         >
           <Button variant="secondary">Become A Bidify Partner</Button>

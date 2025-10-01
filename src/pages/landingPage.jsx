@@ -53,7 +53,7 @@ const landingPage = () => {
           <p className="text_white_32_W600 mb-20">
             Build your own NFT store with our help
           </p>
-          <p className="text_whiteSec_14_W400 mb-20">
+          <p className="text_whiteSec_20_W500 mb-20">
             From the ground up we have partnerships with some of the leading
             companies within the blockchain space, including top canadian
             branding house RHUBARB MEDIA
@@ -155,13 +155,13 @@ const landingPage = () => {
 
   const renderEcosystem = (
     <div className="ecosystem">
-      <p className="text_white_24_W500">
+      <p className="text_primary_24_W600">
         Bidify Ecosystem is diverse and balanced, it consists of 4 major parties
       </p>
       <div className="ecosystem_cards">
         {ecosystemData.map((item, key) => (
           <InfoCards
-            variant="white"
+            variant="default"
             img={item.image}
             head={item.head}
             data={item.data}
@@ -196,7 +196,7 @@ const landingPage = () => {
           </p>
           <div className="aboutUs_links" style={{ alignItems: "center" }}>
             <a
-              href="https://discord.bidify.org"
+              href="https://discord.gg/VSPUucsyvn"
               target="_blank"
               rel="noopener noreferrer"
             >
