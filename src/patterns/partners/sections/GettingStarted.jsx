@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import GettingStartedCard from '../cards/GettingStartedCard';
 import { gettingStarted } from '../utils/cardData';
-import { getIconComponent } from '../utils/icons';
+import { getIconComponent } from '../../utils/icons';
 import ComingSoonPopup from '../ComingSoonPopup';
-import './GettingStarted.scss';
+import '../../../styles/patterns/partners/GettingStarted.scss';
 
 const GettingStarted = () => {
   const [showPopup, setShowPopup] = useState(false);

@@ -1,6 +1,6 @@
 import React from 'react';
-import { getIconComponent } from '../utils/icons';
-import './ModernCard.scss';
+import { getIconComponent } from '../../utils/icons';
+import '../../../styles/patterns/partners/cards/ModernCard.scss';
 
 const ModernCard = ({
   children,

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./NftSaleCalculator.scss";
+import "../../styles/patterns/partners/NftSaleCalculator.scss";
 import mfer from "../../assets/images/mfer.webp";
 import doodle from "../../assets/images/doodle.png";
 import ape from "../../assets/images/ape.webp";

@@ -1,6 +1,6 @@
 import React from 'react';
 import ModernCard from './ModernCard';
-import { getIconComponent } from '../utils/icons';
+import { getIconComponent } from '../../utils/icons';
 
 const PartnershipBenefitCard = ({ benefit }) => {
   return (
