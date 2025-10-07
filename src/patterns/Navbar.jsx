@@ -68,8 +68,7 @@ const Navbar = () => {
       </a>
       <a
         href="http://app.bidify.org/"
-        target="_blank"
-        rel="noopener noreferrer"
+        target="blank"
         onClick={() => setSidebar(false)}
       >
         <Button variant="primary" type="submit">
@@ -135,8 +134,7 @@ const Navbar = () => {
         </div>
         <a
           href="http://app.bidify.org/"
-          target="_blank"
-          rel="noopener noreferrer"
+          target="blank"
           onClick={() => setSidebar(false)}
         >
           <Button variant="primary" type="submit">

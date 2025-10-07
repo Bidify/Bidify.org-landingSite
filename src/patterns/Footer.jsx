@@ -72,7 +72,7 @@ const Footer = () => {
           <p className="text_labelBlack_16_W600">Links</p>
           {links.map((item, key) => (
             <li key={key}>
-              <a href={item.to} target="_blank" className="text_link_14_W400">
+              <a href={item.to} target="blank" className="text_link_14_W400">
                 {item.title}
               </a>
             </li>

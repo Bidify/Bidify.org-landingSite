@@ -1,8 +1,8 @@
 import React from 'react';
 import FeeStructureCard from '../cards/FeeStructureCard';
 import { feeStructure } from '../utils/cardData';
-import { getIconComponent } from '../../utils/icons';
-import '../../../styles/patterns/partners/FeeStructure.scss';
+import { getIconComponent } from '../utils/icons';
+import './FeeStructure.scss';
 
 const FeeStructure = () => {
   return (

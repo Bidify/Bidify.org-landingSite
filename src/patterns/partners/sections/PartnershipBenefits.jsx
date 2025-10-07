@@ -1,7 +1,7 @@
 import React from 'react';
 import PartnershipBenefitCard from '../cards/PartnershipBenefitCard';
 import { partnershipBenefits } from '../utils/cardData';
-import '../../../styles/patterns/partners/PartnershipBenefits.scss';
+import './PartnershipBenefits.scss';
 
 const PartnershipBenefits = () => {
   return (

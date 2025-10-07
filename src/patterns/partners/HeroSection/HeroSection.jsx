@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from '../../../components/Button';
-import { getIconComponent } from '../../utils/icons';
+import { getIconComponent } from '../utils/icons';
 import Slideshow from './Slideshow';
-import '../../../styles/patterns/partners/HeroSection.scss';
+import './HeroSection.scss';
 
 const HeroSection = () => {
   const scrollToCalculator = () => {

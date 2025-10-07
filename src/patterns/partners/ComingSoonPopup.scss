@@ -1,66 +1,126 @@
-.coming-soon-popup {
+.coming-soon-popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  backdrop-filter: blur(4px);
   
-  .popup-content {
-    background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    max-width: 400px;
-    width: 90%;
+  @media (max-width: 768px) {
+    z-index: 2000;
+  }
+}
+
+.coming-soon-popup {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(191, 91, 24, 0.2);
+  position: relative;
+  animation: popupAppear 0.3s ease-out;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  
+  &__title {
+    font-family: "gentona-semiBold";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    color: #BF5B18;
+    margin: 0;
+  }
+  
+  &__close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #6c737d;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background: rgba(191, 91, 24, 0.1);
+      color: #BF5B18;
+    }
+  }
+  
+  &__content {
+    margin-bottom: 2rem;
+  }
+  
+  &__message {
+    font-family: "gentona-book";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    color: #6c737d;
+    margin: 0;
     text-align: center;
-    position: relative;
+  }
+  
+  &__footer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  &__button {
+    background: linear-gradient(135deg, #BF5B18 0%, #f79420 100%);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-family: "gentona-medium";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: all 0.3s ease;
     
-    .popup-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: #333;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(191, 91, 24, 0.3);
     }
     
-    .popup-description {
-      font-size: 1rem;
-      color: #666;
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
+    &:active {
+      transform: translateY(0);
     }
-    
-    .popup-close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: #999;
-      
-      &:hover {
-        color: #333;
-      }
-    }
-    
-    .popup-button {
-      background: #f79420;
-      color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: 500;
-      
-      &:hover {
-        background: #e6861a;
-      }
-    }
+  }
+}
+
+// Animation for popup appearance
+@keyframes popupAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }

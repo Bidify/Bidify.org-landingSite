@@ -2,7 +2,7 @@ import React from "react";
 
 import '../styles/components/button.scss';
 
-const Button = ({ variant, onClick, children, style, type, ...rest }) => {
+const Button = ({ variant, onClick, children, style,type, ...rest }) => {
   const defaultStyle = {
     cursor: "pointer",
     whiteSpace: "nowrap",
