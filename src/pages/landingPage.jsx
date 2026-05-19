@@ -24,7 +24,6 @@ import Advisors from "../patterns/cards/Advisors";
 import Partners from "../patterns/Partners";
 
 // import ContactUs from "../patterns/ContactUs";
-import JoinUs from "../patterns/JoinUs";
 import Button from "../components/Button";
 
 // import { sellerData1, sellerData2, sellerData3 } from "../data/sellerData";
