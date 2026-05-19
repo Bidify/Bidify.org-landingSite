@@ -154,9 +154,16 @@ const landingPage = () => {
 
   const renderEcosystem = (
     <div className="ecosystem">
-      <p className="text_primary_24_W600">
-        Bidify Ecosystem is diverse and balanced, it consists of 4 major parties
-      </p>
+      <div className="ecosystem_header">
+        <p className="ecosystem_eyebrow">Ecosystem</p>
+        <p className="text_primary_24_W600">
+          Four parties power every Bidify sale
+        </p>
+        <p className="ecosystem_subtitle">
+          Buyers, sellers, listing platforms, and selling platforms each have a
+          clear role in a balanced NFT marketplace network.
+        </p>
+      </div>
       <div className="ecosystem_cards">
         {ecosystemData.map((item, key) => (
           <InfoCards
@@ -164,6 +171,7 @@ const landingPage = () => {
             img={item.image}
             head={item.head}
             data={item.data}
+            index={key}
             key={key}
           />
         ))}
@@ -428,7 +436,6 @@ const landingPage = () => {
           viverra velit risus, venenatis ultricies nunc phase nulla vitae. Dolor{" "}
         </p> */}
       </div>
-      <div></div>
       {advisorData.map((item, key) => (
         <Advisors
           image={item.image}

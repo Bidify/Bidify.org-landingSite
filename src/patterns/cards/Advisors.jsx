@@ -8,8 +8,8 @@ const Advisors = ({ image, head, post, about, socialLinks }) => {
       {/* <div style={{ width: "224px", height: 200, whiteSpace: "nowrap" }}> */}
       <img
         src={image}
-        alt="head"
-        style={{ width: "224px", height: "200px", objectFit: "cover" }}
+        alt={head}
+        className="advisorCards_image"
       />
       {/* </div> */}
       <div>

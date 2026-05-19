@@ -1,10 +1,14 @@
 import twitter from "../assets/icons/twitter.svg";
 import linkedin from "../assets/icons/linkedin.svg";
 import instagram from "../assets/icons/instagram.svg";
+import advisor1 from "../assets/advisors/advisor1.jpg";
+import advisor2 from "../assets/advisors/advisor2.jpg";
+import advisor3 from "../assets/advisors/advisor3.jpg";
+import advisor4 from "../assets/advisors/advisor4.jpg";
 
 export const advisorData = [
   {
-    image: require("../assets/advisors/advisor1.jpg").default,
+    image: advisor1,
     head: "Luke ‘Kayaba’ Parker ",
     post: "Ethereum advisor",
     about: ["Experienced with solidity.", " Eye for detail."],
@@ -17,7 +21,7 @@ export const advisorData = [
     ],
   },
   {
-    image: require("../assets/advisors/advisor2.jpg").default,
+    image: advisor2,
     head: "Geoffrey ‘Chockoblock’ Robertson",
     post: "UX mastermind",
     about: [
@@ -43,7 +47,7 @@ export const advisorData = [
     ],
   },
   {
-    image: require("../assets/advisors/advisor3.jpg").default,
+    image: advisor3,
     head: "Chad ‘Rhubarbarian’ Ballantyne",
     post: "Branding supremo",
     about: [
@@ -69,7 +73,7 @@ export const advisorData = [
     ],
   },
   {
-    image: require("../assets/advisors/advisor4.jpg").default,
+    image: advisor4,
     head: "Cryptosi",
     post: "CEO / FOUNDER",
     about: ["Serial Crypto Entrprenuer.", "Former PIVX team member."],

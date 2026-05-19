@@ -1,11 +1,18 @@
 .partners {
   background: #f8f8f8;
-  padding: 50px 0;
+  padding: 56px 1rem;
+  text-align: center;
+
   > div:first-child {
-    width: 70%;
-    margin: 0% auto;
-    text-align: center;
+    width: min(100%, 720px);
+    margin: 0 auto;
     align-items: center;
+
+    img {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+    }
   }
 
   &_logo {

@@ -1,128 +1,169 @@
 .roadmap {
-  background: #f8f8f8;
-  padding: 3rem; /* Mobile base */
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #fff7ed 0%, #f8f8f8 48%, #ffffff 100%);
+  padding: 3rem 1rem;
 
   @media (min-width: 768px) {
-    padding: 3rem;
+    padding: 4rem 1.75rem;
   }
 
   @media (min-width: 1024px) {
-    padding: 3rem;
+    padding: 5rem clamp(2rem, 5vw, 5rem);
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: clamp(4rem, 6vw, 7rem);
+    padding-right: clamp(4rem, 6vw, 7rem);
+  }
+
+  &_header {
+    max-width: 760px;
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px) {
+      margin-bottom: 2.75rem;
+    }
+  }
+
+  &_eyebrow {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2rem;
+    margin-bottom: 0.875rem;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid rgba(191, 91, 24, 0.22);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.78);
+    color: #bf5b18;
+    font-family: "gentona-medium";
+    font-size: 0.875rem;
+    line-height: 1;
+  }
+
+  &_subtitle {
+    max-width: 680px;
+    margin-top: 0.875rem;
+    color: #6c737d;
+    font-family: "gentona-book";
+    font-size: 1rem;
+    line-height: 1.6;
+
+    @media (min-width: 768px) {
+      font-size: 1.125rem;
+    }
   }
 
   .card_wrapper {
     display: grid;
-    grid-template-columns: 1fr; /* Mobile single column */
-    gap: 2rem; /* Mobile base */
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
 
-    @media (min-width: 768px) {
-      grid-template-columns: 1fr 1fr; /* Tablet 2 columns */
-      gap: 8rem;
+    @media (min-width: 700px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
     }
 
-    @media (min-width: 1024px) {
-      grid-template-columns: 1fr 1fr; /* Desktop 2 columns */
-      gap: 8rem;
+    @media (min-width: 1180px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.35rem;
     }
 
-    .card {
+    @media (min-width: 1560px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  .card {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+    padding: 1.25rem;
+    border: 1px solid rgba(76, 75, 75, 0.08);
+    border-radius: 0.875rem;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 18px 44px -34px #343434;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-top: 4px solid #f79420;
+      pointer-events: none;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(191, 91, 24, 0.2);
+      box-shadow: 0 28px 58px -38px #343434;
+    }
+
+    &_header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    &_quarter {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(247, 148, 32, 0.14);
+      color: #bf5b18;
+      font-family: "gentona-medium";
+      font-size: 0.875rem;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    &_index {
+      color: rgba(76, 75, 75, 0.18);
+      font-family: "gentona-semiBold";
+      font-size: 1.75rem;
+      line-height: 1;
+    }
+
+    &_icon {
+      display: grid;
+      place-items: center;
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(76, 75, 75, 0.08);
+      border-radius: 1rem;
       background: #ffffff;
-      border-radius: 1rem; /* Mobile base */
-      padding: 1.5rem; /* Mobile base */
-      box-shadow: 0px 25px 40px -25px #6c737d;
-      position: relative;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 14px 28px -24px #343434;
 
-      &:hover {
-        transform: translateY(-4px);
-        box-shadow: 0px 35px 50px -25px #6c737d;
-      }
-
-      .before {
-        position: absolute;
-        background: rgba(247, 148, 32, 0.15);
-        width: 1.5rem; /* Mobile base */
-        height: 1.5rem;
-        top: 50%;
-        transform: translate(50%, -50%);
-        right: 0;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        z-index: 1;
-
-        @media (min-width: 768px) {
-          left: 50%;
-          top: 100%;
-          transform: translate(-50%, -50%);
-        }
-
-        @media (min-width: 1024px) {
-          left: 50%;
-          top: 100%;
-          transform: translate(-50%, -50%);
-        }
-
-        p {
-          border-radius: 50%;
-          width: 50%;
-          height: 50%;
-          background: #f79420;
-        }
-      }
-
-      .after {
-        position: absolute;
-        background: rgba(247, 148, 32, 0.15);
-        width: 1.5rem; /* Mobile base */
-        height: 1.5rem;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        left: 0;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        z-index: 1;
-
-        @media (min-width: 768px) {
-          left: 50%;
-          top: 0;
-          transform: translate(-50%, -50%);
-        }
-
-        @media (min-width: 1024px) {
-          left: 50%;
-          top: 0;
-          transform: translate(-50%, -50%);
-        }
-
-        p {
-          border-radius: 50%;
-          width: 50%;
-          height: 50%;
-          background: #f79420;
-        }
-      }
-
-      .card_logo {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 8rem; /* Mobile base */
-        height: 8rem;
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
         object-fit: contain;
-        padding: 1rem;
-
-        @media (min-width: 768px) {
-          width: 8rem;
-          height: 8rem;
-        }
-
-        @media (min-width: 1024px) {
-          width: 8rem;
-          height: 8rem;
-        }
       }
+    }
+
+    &_title {
+      margin-bottom: 0.75rem;
+      color: #343434;
+      font-family: "gentona-semiBold";
+      font-size: 1.25rem;
+      line-height: 1.22;
+    }
+
+    &_description {
+      color: #6c737d;
+      font-family: "gentona-book";
+      font-size: 0.975rem;
+      line-height: 1.58;
     }
   }
 }
