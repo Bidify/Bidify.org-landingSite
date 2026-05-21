@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Bidify",
+  "name": "Bidify — NFT Marketplace & Auction Platform",
+  "description": "Bidify is a premier NFT marketplace and auction platform. Build your own NFT store, mint NFTs across multiple blockchains, and trade with our unique decentralised incentive system.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "categories": ["marketplace", "blockchain", "nft", "cryptocurrency"]
 }

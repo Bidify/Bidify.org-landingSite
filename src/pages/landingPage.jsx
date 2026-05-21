@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import Slider from "react-slick";
 // import ReactPlayer from "react-player";
 // import { useHistory } from "react-router";
@@ -451,6 +452,15 @@ const landingPage = () => {
 
   return (
     <div className="landingPage">
+      <Helmet>
+        <title>Bidify — NFT Marketplace & Auction Platform</title>
+        <meta name="description" content="Bidify is a premier NFT marketplace and auction platform. Build your own NFT store, mint NFTs across multiple blockchains, and trade with our unique decentralised incentive system." />
+        <meta property="og:title" content="Bidify — NFT Marketplace & Auction Platform" />
+        <meta property="og:description" content="Bidify is a premier NFT marketplace and auction platform. Build your own NFT store, mint NFTs across multiple blockchains, and trade with our unique decentralised incentive system." />
+        <meta property="og:url" content="https://bidify.org/" />
+        <meta name="twitter:title" content="Bidify — NFT Marketplace & Auction Platform" />
+        <meta name="twitter:description" content="Bidify is a premier NFT marketplace and auction platform. Build your own NFT store, mint NFTs across multiple blockchains, and trade with our unique decentralised incentive system." />
+      </Helmet>
       <div className="padding_container"></div>
       <div className="padding_container">{RenderCarousel()}</div>
       <div className="padding_container">{renderFeatures}</div>
