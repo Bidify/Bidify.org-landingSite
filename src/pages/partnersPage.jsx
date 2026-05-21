@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import "../styles/pages/partnersPage.scss";
 
 // Import new modern components
@@ -11,6 +12,16 @@ import CTASection from "../patterns/partners/CTASection";
 const PartnersPage = () => {
   return (
     <div className="partnersPage">
+      <Helmet>
+        <title>Partners — Bidify NFT Marketplace</title>
+        <meta name="description" content="Become a Bidify partner and build your own NFT store. Access our decentralised auction system, earn from NFT sales, and join the leading multichain NFT marketplace network." />
+        <meta property="og:title" content="Partners — Bidify NFT Marketplace" />
+        <meta property="og:description" content="Become a Bidify partner and build your own NFT store. Access our decentralised auction system, earn from NFT sales, and join the leading multichain NFT marketplace network." />
+        <meta property="og:url" content="https://bidify.org/partners" />
+        <meta name="twitter:title" content="Partners — Bidify NFT Marketplace" />
+        <meta name="twitter:description" content="Become a Bidify partner and build your own NFT store. Access our decentralised auction system, earn from NFT sales, and join the leading multichain NFT marketplace network." />
+      </Helmet>
+
       {/* Hero section outside of constrained container for full width */}
       <HeroSection />
       
