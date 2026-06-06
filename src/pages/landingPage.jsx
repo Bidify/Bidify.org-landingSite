@@ -225,6 +225,41 @@ const landingPage = () => {
     </div>
   );
 
+  const renderMintingSite = (
+    <section className="mintingSite" id="minting">
+      <div className="mintingSite_content">
+        <p className="mintingSite_eyebrow">Minting site</p>
+        <p className="text_primary_24_W600 mb-20">Create NFTs on Bidify</p>
+        <p className="text_secondary_14_W400 mb-20">
+          Our minting site gives creators a direct place to prepare and mint
+          NFTs before they enter the wider Bidify auction ecosystem. Use it to
+          start a new collection, create tokenized artwork, and get assets ready
+          for marketplace activity.
+        </p>
+        <p className="text_secondary_14_W400">
+          Visit mint.bidify.me to access the minting flow and begin creating
+          NFTs with Bidify.
+        </p>
+        <a
+          href="https://mint.bidify.me"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="primary" type="button">
+            Visit Minting Site
+          </Button>
+        </a>
+      </div>
+      <a href="https://mint.bidify.me" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/mint.png"
+          alt="Preview of the Bidify minting site"
+          className="mintingSite_preview"
+        />
+      </a>
+    </section>
+  );
+
   // const renderTopSellers = (
   //   <div className="topSellers">
   //     <div className="mb-30">
@@ -467,6 +502,7 @@ const landingPage = () => {
       <div className="padding_container" style={{ background: "#f8f8f8" }}>
         {renderAboutUs}
       </div>
+      <div className="padding_container">{renderMintingSite}</div>
       {/* <div className="padding_container" style={{ background: "#f8f8f8" }}>
         {renderExplore}
       </div> */}

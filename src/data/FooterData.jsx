@@ -14,6 +14,7 @@ export const links = [
 
 export const explore = [
   { title: "Marketplace", to: "http://app.bidify.org/" },
+  { title: "Minting Site", to: "https://mint.bidify.me" },
 
   // { title: "Bids", to: "/bids" },
   // { title: "Live Auctions", to: "/auctions" },
